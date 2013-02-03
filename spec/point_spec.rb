@@ -12,12 +12,28 @@ describe Point do
   end
 
   describe '#add_vector' do
-
     it 'returns a new point at the correct position' do
       p2 = point.add_vector(vector)
       p2.x.should eq(3)
       p2.y.should eq(3)
     end
+  end
 
+  describe 'moving' do
+    let(:inky) { Point.new }
+
+    before do
+      point.x = 0
+      point.y = -1
+      inky.x = 1
+      inky.y = 1
+    end
+
+    it 'moves inky to pacmans position' do
+      v = point - inky
+
+      v.x.should eq(-1)
+      v.y.should eq(-2)
+    end
   end
 end

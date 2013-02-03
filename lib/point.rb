@@ -8,4 +8,11 @@ class Point
     p
   end
 
+  def -(other)
+    v = Vector.new
+    v.x = x - other.x
+    v.y = y - other.y
+    v
+  end
+
 end
