@@ -40,5 +40,22 @@ describe Point do
       v = point - inky
       v.length.should eq(2.23606797749979)
     end
+
+    context 'comparison' do
+      let(:clive) { Point.new }
+
+      before do
+        clive.x = 2
+        clive.y = -1
+      end
+
+      it 'can calculate the length square' do
+        ip = point - inky
+        cp = point - clive
+
+        ip.length_sqr.should eq(5)
+        cp.length_sqr.should eq(4)
+      end
+    end
   end
 end
