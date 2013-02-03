@@ -41,7 +41,7 @@ describe Point do
       v.length.should eq(2.23606797749979)
     end
 
-    context 'comparison' do
+    context 'length square' do
       let(:clive) { Point.new }
 
       before do
@@ -58,4 +58,5 @@ describe Point do
       end
     end
   end
+
 end
