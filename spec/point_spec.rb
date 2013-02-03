@@ -35,5 +35,10 @@ describe Point do
       v.x.should eq(-1)
       v.y.should eq(-2)
     end
+
+    it 'can calculate the length' do
+      v = point - inky
+      v.length.should eq(2.23606797749979)
+    end
   end
 end
